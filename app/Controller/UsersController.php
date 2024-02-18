@@ -1,4 +1,5 @@
 <?php
+use Cake\Controller\Component\AuthComponent;
 
 class UsersController extends AppController {
  
@@ -132,5 +133,17 @@ class UsersController extends AppController {
 		$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
 		$this->set('user', $this->User->find('first', $options));
 	}
+
+    public function isAuthorized($user) {
+        // Here is where we should verify the role and give access based on role
+        if ($this->action === 'add' || $this->action === 'view') {
+            return true;
+        }
+        // Admin can access every action
+        if ($user['User']['is_admin']) {
+            return true;
+        }
+        return parent::isAuthorized($user);
+    }
  
 }

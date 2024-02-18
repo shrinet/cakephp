@@ -20,7 +20,6 @@
  */
 
 App::uses('Controller', 'Controller');
-
 /**
  * Application Controller
  *
@@ -34,11 +33,18 @@ class AppController extends Controller {
     public $components = array(
         'DebugKit.Toolbar',
         'Session',
+        'Flash',
         'Auth' => array(
             'loginRedirect' => array('controller' => 'users', 'action' => 'index'),
             'logoutRedirect' => array('controller' => 'users', 'action' => 'login'),
             'authError' => 'You must be logged in to view this page.',
             'loginError' => 'Invalid Username or Password entered, please try again.',
+            'unauthorizedRedirect' => [
+                'controller' => 'users',
+                'action' => 'index',
+                'prefix' => false
+            ],
+            'authorize' => array('Controller'),
             'authenticate' => array(
                 'Form' => array(
                     'fields' => array('username' => 'email')
@@ -49,12 +55,18 @@ class AppController extends Controller {
      
     // only allow the login controllers only
     public function beforeFilter() {
-        $this->Auth->allow('login');
+        $this->Auth->allow('login','index', 'view');
     }
      
     public function isAuthorized($user) {
         // Here is where we should verify the role and give access based on role
-         
-        return true;
+        if ($this->action === 'add' || $this->action === 'view') {
+            return true;
+        }
+        // Admin can access every action
+        if ($user['User']['is_admin']) {
+            return true;
+        }
+        return false;
     }
 }

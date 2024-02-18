@@ -49,7 +49,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				<span class="fs-4">Cakephp App</span>
 			</a>
 			
-			<?= AuthComponent::user('id') ? $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout'), array('class' => 'btn btn-outline-primary')) : $this->Html->link('Login', array('controller' => 'users', 'action' => 'login'), array('class' => 'btn btn-outline-primary')) ?>
+			<?= $this->Session->read('Auth.User') ? $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout'), array('class' => 'btn btn-outline-primary')) : $this->Html->link('Login', array('controller' => 'users', 'action' => 'login'), array('class' => 'btn btn-outline-primary')) ?>
 			
 		</header>
 		<div id="content">
