@@ -28,7 +28,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('cake.generic');
+		echo $this->Html->css('bootstrap.min');
+		echo $this->Html->script('jquery.min', array('inline' => false));
+		echo $this->Html->script('bootstrap.bundle.min', array('inline' => false));
+
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -36,10 +39,22 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	?>
 </head>
 <body>
-	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'https://cakephp.org'); ?></h1>
-		</div>
+	<div class="container">
+		
+		<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+			<a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+				
+				<span class="fs-4">Simple header</span>
+			</a>
+
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">About</a></li>
+			</ul>
+		</header>
 		<div id="content">
 
 			<?php echo $this->Flash->render(); ?>
