@@ -69,7 +69,7 @@
 		echo $this->Form->input('state', array('options' => $states, 'class' => 'form-control','div' => array('class' => 'col-md-6')));
         echo $this->Form->input('address', array('class' => 'form-control','div' => array('class' => 'col-md-6')));
         echo $this->form->label('role', 'Admin');
-        echo $this->form->checkbox('role', ['value' => 'admin', 'hiddenField' => false]);
+        echo $this->form->checkbox('User.is_admin', ['value' => '1', 'hiddenField' => false]);
 	?>
 	
 <?php echo $this->Form->end(__('Submit')); ?>

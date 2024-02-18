@@ -32,6 +32,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		//echo $this->Html->css('style');
 		echo $this->Html->script('jquery.min', array('inline' => false));
 		echo $this->Html->script('bootstrap.bundle.min', array('inline' => false));
+		echo $this->Html->script('jquery.validate.min', array('inline' => false));
 
 
 		echo $this->fetch('meta');
