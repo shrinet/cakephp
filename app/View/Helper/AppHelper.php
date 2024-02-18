@@ -30,4 +30,15 @@ App::uses('Helper', 'View');
  * @package       app.View.Helper
  */
 class AppHelper extends Helper {
+/**
+ * userAdmin method
+ *
+ * @param boolean| $value boolean
+ * @return string
+ *
+ */
+
+public function userAdmin($value, $showFalse = true) {
+    return ($value) ? "Admin" : (($showFalse) ? "User" : "");
+}
 }

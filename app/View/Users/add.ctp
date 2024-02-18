@@ -45,7 +45,7 @@
         //'div' => array('class' => 'form-floating')
       )
     )); ?>
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
     
         <legend><?php echo __('Add User'); ?></legend>
         <?php 

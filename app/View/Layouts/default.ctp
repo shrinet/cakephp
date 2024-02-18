@@ -29,6 +29,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('bootstrap.min');
+		//echo $this->Html->css('style');
 		echo $this->Html->script('jquery.min', array('inline' => false));
 		echo $this->Html->script('bootstrap.bundle.min', array('inline' => false));
 
@@ -44,16 +45,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
 			<a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
 				
-				<span class="fs-4">Simple header</span>
+				<span class="fs-4">Cakephp App</span>
 			</a>
-
-			<ul class="nav nav-pills">
-				<li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">About</a></li>
-			</ul>
+			
+			<?= AuthComponent::user('id') ? $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout'), array('class' => 'btn btn-outline-primary')) : $this->Html->link('Login', array('controller' => 'users', 'action' => 'login'), array('class' => 'btn btn-outline-primary')) ?>
+			
 		</header>
 		<div id="content">
 

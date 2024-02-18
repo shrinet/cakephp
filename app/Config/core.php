@@ -351,6 +351,8 @@
  *	));
  */
 
+ Configure::write('FakeSeeder.seedable', true);
+
 /**
  * Configure the cache handlers that CakePHP will use for internal
  * metadata like class maps, and model schema.

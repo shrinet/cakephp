@@ -4,112 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "74780303269b7ef7ab5a8d3221a50d72",
-    "packages": [],
-    "packages-dev": [
-        {
-            "name": "cakephp/cakephp-codesniffer",
-            "version": "1.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cakephp/cakephp-codesniffer.git",
-                "reference": "0f3559af72fd9c2bba7310a7c4496fbb97502352"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp-codesniffer/zipball/0f3559af72fd9c2bba7310a7c4496fbb97502352",
-                "reference": "0f3559af72fd9c2bba7310a7c4496fbb97502352",
-                "shasum": ""
-            },
-            "require": {
-                "squizlabs/php_codesniffer": "^1.4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.1.0"
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "CakePHP Community",
-                    "homepage": "https://github.com/cakephp/cakephp-codesniffer/graphs/contributors"
-                }
-            ],
-            "description": "CakePHP CodeSniffer Standards",
-            "homepage": "http://cakephp.org",
-            "keywords": [
-                "codesniffer",
-                "framework"
-            ],
-            "support": {
-                "forum": "http://stackoverflow.com/tags/cakephp",
-                "irc": "irc://irc.freenode.org/cakephp",
-                "issues": "https://github.com/cakephp/cakephp-codesniffer/issues",
-                "source": "https://github.com/cakephp/cakephp-codesniffer"
-            },
-            "time": "2018-07-04T15:25:21+00:00"
-        },
-        {
-            "name": "cakephp/debug_kit",
-            "version": "2.2.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cakephp/debug_kit.git",
-                "reference": "8649a612001fa1caee82d9c432b8223cef221104"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/8649a612001fa1caee82d9c432b8223cef221104",
-                "reference": "8649a612001fa1caee82d9c432b8223cef221104",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "^1.0.0",
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "cakephp/cakephp-codesniffer": "^1.0.0"
-            },
-            "type": "cakephp-plugin",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.2.x-dev"
-                },
-                "installer-name": "DebugKit"
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mark Story",
-                    "homepage": "http://mark-story.com",
-                    "role": "Author"
-                },
-                {
-                    "name": "CakePHP Community",
-                    "homepage": "https://github.com/cakephp/debug_kit/graphs/contributors"
-                }
-            ],
-            "description": "CakePHP Debug Kit",
-            "homepage": "https://github.com/cakephp/debug_kit",
-            "keywords": [
-                "cakephp",
-                "debug",
-                "kit"
-            ],
-            "support": {
-                "forum": "http://stackoverflow.com/tags/cakephp",
-                "irc": "irc://irc.freenode.org/cakephp",
-                "issues": "https://github.com/cakephp/debug_kit/issues",
-                "source": "https://github.com/cakephp/debug_kit"
-            },
-            "time": "2018-09-18T01:48:48+00:00"
-        },
+    "content-hash": "d71b01a82f4f40ea2fe8a8d2ed91ac95",
+    "packages": [
         {
             "name": "composer/installers",
             "version": "v1.12.0",
@@ -260,6 +156,226 @@
                 }
             ],
             "time": "2021-09-13T08:19:44+00:00"
+        },
+        {
+            "name": "fzaninotto/faker",
+            "version": "v1.9.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fzaninotto/Faker.git",
+                "reference": "848d8125239d7dbf8ab25cb7f054f1a630e68c2e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/848d8125239d7dbf8ab25cb7f054f1a630e68c2e",
+                "reference": "848d8125239d7dbf8ab25cb7f054f1a630e68c2e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3 || ^7.0"
+            },
+            "require-dev": {
+                "ext-intl": "*",
+                "phpunit/phpunit": "^4.8.35 || ^5.7",
+                "squizlabs/php_codesniffer": "^2.9.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Faker\\": "src/Faker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "François Zaninotto"
+                }
+            ],
+            "description": "Faker is a PHP library that generates fake data for you.",
+            "keywords": [
+                "data",
+                "faker",
+                "fixtures"
+            ],
+            "support": {
+                "issues": "https://github.com/fzaninotto/Faker/issues",
+                "source": "https://github.com/fzaninotto/Faker/tree/v1.9.2"
+            },
+            "abandoned": true,
+            "time": "2020-12-11T09:56:16+00:00"
+        },
+        {
+            "name": "ravage84/cakephp-fake-seeder",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ravage84/cakephp-fake-seeder.git",
+                "reference": "c950759ffa5eb9454b03bcda0fd97c1e9ceb27d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ravage84/cakephp-fake-seeder/zipball/c950759ffa5eb9454b03bcda0fd97c1e9ceb27d3",
+                "reference": "c950759ffa5eb9454b03bcda0fd97c1e9ceb27d3",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.0",
+                "fzaninotto/faker": "^1.5",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "FakeSeeder"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Würth",
+                    "email": "ravage@bluewin.ch",
+                    "homepage": "https://github.com/ravage84/",
+                    "role": "Lead developer"
+                },
+                {
+                    "name": "Other contributors",
+                    "homepage": "https://github.com/ravage84/cakephp-fake-seeder/graphs/contributors",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "A shell to seed your database with fake and/or fixed data.",
+            "homepage": "https://github.com/ravage84/cakephp-fake-seeder",
+            "keywords": [
+                "cakephp",
+                "data",
+                "faker",
+                "fixtures",
+                "plugin",
+                "seeder"
+            ],
+            "support": {
+                "issues": "https://github.com/ravage84/cakephp-fake-seeder/issues",
+                "source": "https://github.com/ravage84/cakephp-fake-seeder",
+                "wiki": "https://github.com/ravage84/cakephp-fake-seeder/wiki"
+            },
+            "time": "2015-08-31T15:52:12+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "cakephp/cakephp-codesniffer",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/cakephp-codesniffer.git",
+                "reference": "0f3559af72fd9c2bba7310a7c4496fbb97502352"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/cakephp-codesniffer/zipball/0f3559af72fd9c2bba7310a7c4496fbb97502352",
+                "reference": "0f3559af72fd9c2bba7310a7c4496fbb97502352",
+                "shasum": ""
+            },
+            "require": {
+                "squizlabs/php_codesniffer": "^1.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.1.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/cakephp-codesniffer/graphs/contributors"
+                }
+            ],
+            "description": "CakePHP CodeSniffer Standards",
+            "homepage": "http://cakephp.org",
+            "keywords": [
+                "codesniffer",
+                "framework"
+            ],
+            "support": {
+                "forum": "http://stackoverflow.com/tags/cakephp",
+                "irc": "irc://irc.freenode.org/cakephp",
+                "issues": "https://github.com/cakephp/cakephp-codesniffer/issues",
+                "source": "https://github.com/cakephp/cakephp-codesniffer"
+            },
+            "time": "2018-07-04T15:25:21+00:00"
+        },
+        {
+            "name": "cakephp/debug_kit",
+            "version": "2.2.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/debug_kit.git",
+                "reference": "8649a612001fa1caee82d9c432b8223cef221104"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/8649a612001fa1caee82d9c432b8223cef221104",
+                "reference": "8649a612001fa1caee82d9c432b8223cef221104",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.0.0",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "cakephp/cakephp-codesniffer": "^1.0.0"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2.x-dev"
+                },
+                "installer-name": "DebugKit"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Story",
+                    "homepage": "http://mark-story.com",
+                    "role": "Author"
+                },
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/debug_kit/graphs/contributors"
+                }
+            ],
+            "description": "CakePHP Debug Kit",
+            "homepage": "https://github.com/cakephp/debug_kit",
+            "keywords": [
+                "cakephp",
+                "debug",
+                "kit"
+            ],
+            "support": {
+                "forum": "http://stackoverflow.com/tags/cakephp",
+                "irc": "irc://irc.freenode.org/cakephp",
+                "issues": "https://github.com/cakephp/debug_kit/issues",
+                "source": "https://github.com/cakephp/debug_kit"
+            },
+            "time": "2018-09-18T01:48:48+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
