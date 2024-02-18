@@ -140,7 +140,7 @@ class UsersController extends AppController {
             return true;
         }
         // Admin can access every action
-        if ($user['User']['is_admin']) {
+        if ($user['is_admin']) {
             return true;
         }
         return parent::isAuthorized($user);

@@ -52,7 +52,7 @@
 <div class="form-signin w-100 m-auto">
 <?php echo $this->Form->create('User', array(
       'class' => 'row g-3',
-      'id' => 'signup-form',
+      'id' => 'edit-form',
       'inputDefaults' => array(
         //'div' => array('class' => 'form-floating')
       )
@@ -77,3 +77,25 @@
 </main>
 
 </div>
+<script>
+$("#edit-form").validate({
+  errorElement: "em",
+				errorPlacement: function ( error, element ) {
+					// Add the `help-block` class to the error element
+					error.addClass( "invalid-feedback" );
+          error.closest("form").addClass("was-validated");
+
+					if ( element.prop( "type" ) === "checkbox" ) {
+						error.insertAfter( element.parent( "label" ) );
+					} else {
+						error.insertAfter( element );
+					}
+				},
+				highlight: function ( element, errorClass, validClass ) {
+					$( element ).parents( ".col-sm-5" ).addClass( "has-error" ).removeClass( "has-success" );
+				},
+				unhighlight: function (element, errorClass, validClass) {
+					$( element ).parents( ".col-sm-5" ).addClass( "has-success" ).removeClass( "has-error" );
+				}
+});
+</script>
